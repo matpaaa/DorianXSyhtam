@@ -43,7 +43,7 @@ body {
 }
 
 .text {
-    color: var(--black);
+    color: var(--dark-gray);
     font-size: 20px;
     font-weight: 400;
 }
