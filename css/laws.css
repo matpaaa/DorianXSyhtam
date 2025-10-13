@@ -11,9 +11,12 @@ section {
     gap: 14px;
 }
 
-.article-section {
+.article-section{
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px 0px;
+}
+.article-section > ul{
+    padding-left: 40px;
 }
