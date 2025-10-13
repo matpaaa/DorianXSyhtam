@@ -1,0 +1,53 @@
+@import url('/css/index.css');
+
+.review-container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    padding: 10px;
+    gap: 20px;
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+.review-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.review-header > p {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.review-stars {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 4px;
+}
+
+.review-text {
+    color: var(--dark-gray);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.review-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: end;
+}
+
+.review-footer > p {
+    color: var(--dark-gray);
+    font-size: 16px;
+    font-weight: 600;
+}
