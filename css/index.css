@@ -1,0 +1,17 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #D10028;
+    --black: #181818;
+    --white: #FFFFFF;
+    --dark-gray: #6A6262;
+    --light-gray: #F9F6F6;
+
+    --primary-hover: #D10028;
+    --dark-gray-hover: #6A6262;
+}
