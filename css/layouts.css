@@ -1,0 +1,94 @@
+@import url('./index.css');
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    flex-direction: row;
+    background-color: transparent;
+    border-bottom: 2px var(--primary) solid;
+    padding-left: 140px;
+    padding-right: 140px;
+    height: 100px;
+}
+
+.picture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.langage-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.langage {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-items: center;
+}
+
+.langage > button{
+    color:var(--black);
+    background-color: transparent;
+    font-size: 14px;
+    border: none;
+
+    
+}
+
+.rent-me{
+    background-color: var(--primary);
+    color: var(--white);
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    border-radius: 4%;
+    border: color(var(--primary));
+    font-size: 14px;
+}
+
+.nav-element{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.logo{
+    width: 288px;
+    height: 24px;
+
+}
+
+
+.button-rent-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-section{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: auto;
+}
