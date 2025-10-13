@@ -92,3 +92,34 @@ nav {
     gap: 50px;
     justify-content: auto;
 }
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    flex-direction: row;
+    background-color: var(--black);
+    padding: 0 140px;
+    height: 200px;
+}
+
+.nav-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-element-footer{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-media-section{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;  
+}
