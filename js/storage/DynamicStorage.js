@@ -27,7 +27,6 @@ export default class DynamicStorage {
         if (!key) {
             throw new Error('Key is null')
         }
-
         localStorage.setItem(key, null)
     }
 
