@@ -59,9 +59,10 @@ export default class Reviews {
      * @param {string} name 
      * @param {number} stars 
      * @param {string} content 
+     * @param {string} type 
      */
-    createReview(name, stars, content) {
-        const newReview = new Review(name, stars, content)
+    createReview(name, stars, content, type) {
+        const newReview = new Review(name, stars, content, type)
 
         const actualReviews = this.getReviews()
         actualReviews.push(newReview)

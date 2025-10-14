@@ -10,7 +10,8 @@ function loadReviewsData() {
         reviews.createReview(
             review.name,
             review.stars,
-            review.content
+            review.content,
+            review.type
         )
     }
 }

@@ -7,13 +7,15 @@ export default class Review {
      * @param {string} name 
      * @param {string} stars 
      * @param {string} content 
+     * @param {string} type 
      */
-    constructor(name, stars, content) {
+    constructor(name, stars, content, type) {
         this.name = name
         this.stars = stars
         this.content = content
+        this.type = type
 
-        this.date = new Date().getDate()
+        this.date = `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`
         this.reviewId = JSON.stringify(new Date().getTime())
     }
 
@@ -41,4 +43,10 @@ export default class Review {
      * Date
      */
     date = null
+
+    /**
+     * Type of review
+     * tripadvisor | google | trustpilot
+     */
+    type = 'tripadvisor'
 }
