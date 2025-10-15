@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     justify-items: center;
+    align-items: center;
     flex-direction: row;
     background-color: transparent;
     border-bottom: 2px var(--primary) solid;
@@ -12,22 +13,8 @@
     height: 100px;
 }
 
-.picture{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.langage-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.langage-section {
+       width: 80px;
 }
 
 .langage {
@@ -91,4 +78,169 @@ nav {
     flex-direction: row;
     gap: 50px;
     justify-content: auto;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--black);
+    padding: 0 140px;
+    height: 200px;
+}
+
+.nav-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.nav-element-footer{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-media-section{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;  
+}
+
+.header-space {
+    display: none;
+}
+
+@media only screen and (max-width:768px){
+
+    .header{
+        display: flex;
+        justify-content: 30px;
+        justify-items: center;
+        flex-direction: column;
+        background-color: transparent;
+        border-bottom: 2px var(--primary) solid;
+        padding: 20px 50px;
+        height: 191px;
+    }
+
+    .header-space {
+        display: block;
+        width: 75px;
+    }   
+    
+    .button-rent-me{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .button-section{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .langage-section {
+        width: 75px;
+    }
+
+    .footer{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--black);
+    padding: 20px 50px;
+    height: 200px;
+    }
+
+    .nav-element-footer{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    white-space: nowrap;
+    }
+
+}
+
+@media only screen and (max-width:450px){
+
+    .header{
+        display: flex;
+        justify-content: 30px;
+        justify-items: center;
+        flex-direction: column;
+        background-color: transparent;
+        border-bottom: 2px var(--primary) solid;
+        padding: 20px 50px;
+        height: 240px;
+    }
+
+    .header-space {
+        display: block;
+        width: 75px;
+    }   
+    
+    .button-rent-me{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .button-section{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .langage-section {
+        display: flex;
+        justify-content: center;
+        width: 75px;
+        
+    }
+
+    .footer{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--black);
+    padding: 20px 20px;
+    height: 200px;
+    }
+
+    .nav-element-footer{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    
+    }
+
+    .nav-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        list-style: none;
+        gap: 10px;
+    }
+
 }
