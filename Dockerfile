@@ -4,7 +4,9 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 WORKDIR /var/www/proj2
 
-COPY assets css js ./
+COPY css css
+COPY js js
+COPY assets assets
 COPY *.html ./
 
 RUN chown -R nginx:nginx /var/www/proj2 \
