@@ -38,7 +38,7 @@ jobs:
                 port: 43024
                 script: |
                     docker rmi -f g4-proj2:latest
-                    docker stop g4-proj2
+                    docker rm -f g4-proj2
                     docker load -i /tmp/g4_proj2_latest.tar
                     rm -rf /tmp/g4_proj2_latest.tar
                     docker run -d --name g4-proj2 -p 80:80 g4-proj2:latest
