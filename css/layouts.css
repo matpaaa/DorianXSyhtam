@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     gap: 5px;
-    justify-items: center;
+    align-items: center;
 }
 
 .langage > button{
@@ -243,4 +243,8 @@
         gap: 10px;
     }
 
+}
+
+.home-header{
+    background: var(--black-transparent);
 }
