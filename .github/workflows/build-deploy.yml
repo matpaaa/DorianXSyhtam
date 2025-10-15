@@ -1,0 +1,40 @@
+name: 'Build & Deploy Pipeline'
+
+on:
+    push:
+        branches:
+            - prod
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Build Docker image
+              run: docker build -t g4-proj2:latest .
+
+            - name: Save Docker image
+              run: docker save g4-proj2:latest -o g4_proj2_latest.tar
+
+            - name: Copy image to VPS
+              uses: appleboy/scp-action@v1.0.0
+              with:
+                host: ${{ secrets.SERVER_DNS }}
+                username: ${{ secrets.SERVER_USER }}
+                password: ${{ secrets.SERVER_PASSWORD }}
+                source: "g4_proj2_latest.tar"
+                target: '/tmp'
+
+            - name: Load image and deploy on VPS
+              uses: appleboy/ssh-action@v1.0.0
+              with:
+                host: ${{ secrets.SERVER_DNS }}
+                username: ${{ secrets.SERVER_USER }}
+                password: ${{ secrets.SERVER_PASSWORD }}
+                script: |
+                    docker load -i /tmp/g4_proj2_latest.tar
+                    rm -rf /tmp/g4_proj2_latest.tar
+                    docker run -p 80:80 g4-proj2:latest -d
