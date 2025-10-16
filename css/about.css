@@ -1,0 +1,87 @@
+.presentation-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 80px;    
+}
+
+.presentation-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 680px;
+    height: 506px;
+}
+
+.title-about{
+    text-align: center;
+}
+
+.objective-gap{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.icon-gap{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-section{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-gray);
+    width: 50%;
+    padding: 20px 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.section-grey {
+    padding: 1.5% 20%;
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bold-icon{
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.semibold-icon{
+    color: var(--dark-gray);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stats-section{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+}
+
+.stats-frame{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.last-text{
+    font-size: 36px;
+    color: var(--black);
+    font-weight: 700;
+}
+.btn-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}

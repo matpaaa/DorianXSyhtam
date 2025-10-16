@@ -32,13 +32,23 @@ export default class Reviews {
     }
 
     /**
+     * Get review with reviewId
+     * @param {string} reviewId 
+     * @returns {Review | null}
+     */
+    getReview(reviewId) {
+        const reviews = this.getReviews()
+        return reviews.filter(review => review.reviewId === reviewId)[0]
+    }
+
+    /**
      * Delete reviews
      */
     deleteReviews() {
         try {
             this.dynamicStorage.deleteData(this.key)
         } catch (err) {
-            console.error(`Error deleting review: ${err}`)
+            console.error(`Error deleting reviews: ${err}`)
         }
     }
 
