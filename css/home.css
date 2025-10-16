@@ -9,7 +9,8 @@
     justify-content: space-between;
     padding: 0px 140px;
     height: 100px;
-    background: var(--black-transparent);
+    background: var(--black-transparent)!important;
+    border: none !important;
 }
 
 .header-nav, .logo-container, .header-right {
@@ -28,7 +29,7 @@
 }
 
 .nav-element {
-    color: var(--white);
+    color: var(--white)!important;
     font-size: 20px;
     font-weight: 700;
 }
@@ -238,3 +239,4 @@
     align-items: center;
     justify-content: center;
 }
+
