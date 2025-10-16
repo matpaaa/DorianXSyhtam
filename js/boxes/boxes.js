@@ -72,7 +72,8 @@ export default class Boxes {
      * @param {number} price 
      * @param {string[]} images 
      * @param {string} address 
-     * @param {string} description 
+     * @param {string} description
+     * @param {string} city 
      */
     createBox(
         name,
@@ -81,6 +82,7 @@ export default class Boxes {
         images,
         address,
         description,
+        city
     ) {
         const newBox = new Box(
             name,
@@ -88,7 +90,8 @@ export default class Boxes {
             images,
             meter,
             description,
-            address
+            address,
+            city
         )
         
         const actualBoxes = this.getBoxes()

@@ -9,15 +9,19 @@ export default class Box {
      * @param {string[]} images 
      * @param {number} meter 
      * @param {string} description 
-     * @param {string} address 
+     * @param {string} address
+     * @param {string} city 
      */
-    constructor(name, price, images, meter, description, address) {
+    constructor(name, price, images, meter, description, address, city) {
         this.name = name
         this.price = price
         this.images = images
         this.meter = meter
         this.description = description
         this.address = address
+        this.city = city
+
+        this.boxId = JSON.stringify(new Date().getTime())
     }
 
     /**
@@ -59,4 +63,9 @@ export default class Box {
      * Box Id
      */
     boxId = null
+
+    /**
+     * City Paris | Lyon | Marseille | Bordeaux
+     */
+    city = null
 }
