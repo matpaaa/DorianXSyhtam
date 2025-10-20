@@ -1,0 +1,82 @@
+.text-subtitle{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--dark-gray);
+}
+
+.page-title{
+    text-align: center;
+}
+
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    gap: 180px;
+}
+
+.informations-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.name{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.description{
+    font-size: 20px;
+    color: var(--dark-gray);
+}
+
+.icon-section{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.school{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.description-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.school-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-section img {
+    width: 350px;
+    height: 500px;
+}
+
+section  ul {
+    margin-left: 30px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.status {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    top: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    background-color: var(--black-transparent);
+}
+
