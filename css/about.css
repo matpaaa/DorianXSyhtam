@@ -1,7 +1,10 @@
+
+
 .presentation-section{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 80px;    
 }
 
@@ -10,11 +13,16 @@
     flex-direction: column;
     gap: 10px;
     width: 680px;
-    height: 506px;
 }
 
 .title-about{
     text-align: center;
+}
+
+.objective-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .objective-gap{
@@ -29,7 +37,7 @@
     gap: 10px;
 }
 
-.icon-section{
+.icon-section {
     display: flex;
     flex-direction: row;
     background-color: var(--light-gray);
@@ -37,10 +45,17 @@
     padding: 20px 10px;
     gap: 10px;
     align-items: center;
+    border-radius: 4px;
+}
+
+.icon-section > p {
+    color: var(--dark-gray);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .section-grey {
-    padding: 1.5% 20%;
+    padding: 30px 10%;
     background-color: var(--light-gray);
     display: flex;
     flex-direction: column;
@@ -64,6 +79,7 @@
     flex-direction: row;
     gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .stats-frame{
@@ -84,4 +100,16 @@
     gap: 20px;
     justify-items: center;
     align-items: center;
+}
+
+@media only screen and (max-width:768px) {
+    .icon-section {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .icon-section {
+        width: 100%;
+    }
 }

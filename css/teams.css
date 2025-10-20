@@ -1,55 +1,49 @@
-.text-subtitle{
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--dark-gray);
-}
-
-.page-title{
+.page-title {
     text-align: center;
 }
 
-.profile-section{
+.profile-section {
     display: flex;
     flex-direction: row;
     gap: 180px;
 }
 
-.informations-section{
+.informations-section {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.name{
+.name {
     font-size: 24px;
     font-weight: 700;
     color: var(--black);
 }
 
-.description{
+.description {
     font-size: 20px;
     color: var(--dark-gray);
 }
 
-.icon-section{
+.icon-section {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.school{
+.school {
     font-size: 24px;
     font-weight: 600;
     color: var(--black);
 }
 
-.description-section{
+.description-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.school-section{
+.school-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -60,7 +54,7 @@
     height: 500px;
 }
 
-section  ul {
+section ul {
     margin-left: 30px;
 }
 
@@ -79,4 +73,3 @@ section  ul {
     padding: 10px 10px;
     background-color: var(--black-transparent);
 }
-
