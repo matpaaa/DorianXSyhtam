@@ -39,7 +39,7 @@ export default class Boxes {
      */
     getBox(boxId) {
         const boxes = this.getBoxes()
-        return boxes.filter(box => box.boxId === boxId)[0]
+        return boxes.filter(box => box.boxId == boxId)[0]
     }
 
     /**
@@ -105,10 +105,9 @@ export default class Boxes {
      * @returns {number}
      */
     getReviewsStars(boxId) {
-
         const box = this.getBox(boxId)
         const stars = []
-
+        
         for (let reviewId of box.reviews) {
             const review = this.reviews.getReview(reviewId)
 
@@ -125,7 +124,7 @@ export default class Boxes {
         const boxes = this.getBoxes()
 
         const boxesUpdated = boxes.map(box => {
-            if (box.boxId === boxId) {
+            if (box.boxId == boxId) {
                 return {
                     ...box,
                     reviews: [...box.reviews, reviewId]

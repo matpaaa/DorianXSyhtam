@@ -1,0 +1,152 @@
+@import url('/css/index.css');
+
+.shop-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.shop-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.shop-img {
+    border-radius: 4px;
+    width: 500px;
+    height: 600px;
+}
+
+.shop-left-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    gap: 30px;
+}
+
+.shop-right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: start;
+    width: 600px;
+}
+
+.informations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.informations-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.stars-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dark-gray);
+}
+
+.price {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--black);
+}
+
+.images-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.images-container > img {
+    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.shop-details-container, .details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+.details-list-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.details-element {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+    width: 400px;
+    border-radius: 4px;
+    background: var(--light-gray);
+}
+
+.details-text {
+    font-weight: 600;
+    color: var(--dark-gray);
+    font-size: 20px;
+}
+
+.last-reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width:450px){
+    .shop-img {
+        border-radius: 4px;
+        width: 100%;
+        height: 600px;
+    }
+
+    .details-element {
+        width: 100%;
+    }
+}
+

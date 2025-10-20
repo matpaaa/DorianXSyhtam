@@ -20,7 +20,7 @@
 }
 
 .section {
-    padding: 0px 20%;
+    padding: 0px 10%;
 }
 
 body {
@@ -68,6 +68,7 @@ body {
     border: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-items: center;
     padding: 10px 0px;
     gap: 10px;
@@ -108,7 +109,7 @@ body {
 
 @media only screen and (max-width:768px){
     .section {
-        padding: 0px 50px;
+        padding: 0px 40px;
     } 
 
     body {
