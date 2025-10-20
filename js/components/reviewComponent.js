@@ -1,4 +1,4 @@
-import Review from "./review.model.js";
+import Review from "../reviews/review.model.js";
 
 /**
  * Generate Review component
