@@ -1,3 +1,4 @@
+import generateRandomNumber from "../_utils/generateRandomNumber.js"
 
 
 export default class Box {
@@ -21,7 +22,7 @@ export default class Box {
         this.address = address
         this.city = city
 
-        this.boxId = JSON.stringify(new Date().getTime())
+        this.boxId = generateRandomNumber()
     }
 
     /**

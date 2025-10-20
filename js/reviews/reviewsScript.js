@@ -1,5 +1,5 @@
 import DynamicStorage from "../storage/DynamicStorage.js";
-import reviewComponent from "./reviewComponent.js";
+import reviewComponent from "../components/reviewComponent.js";
 import Reviews from "./reviews.js";
 
 

@@ -6,7 +6,7 @@ const BOXES_DATA = [
         meter: 8,
         description: 'Ideally located in Lyon Vaise, this 8 m² storage unit offers a practical and secure storage solution. Perfect for storing furniture, boxes, professional equipment or personal belongings, it is suitable for both individuals and businesses. Easily accessible and designed to protect your belongings in the best possible conditions, this storage unit combines ease of use with peace of mind.',
         price: 80,
-        images: ['/assets/box/boxes.webp'],
+        images: ['/assets/box/boxes.webp', '/assets/box/box1.jpg'],
         address: '24, avenue Joannes Masset 69009 Lyon',
         city: 'Lyon'
     },
@@ -24,7 +24,7 @@ const BOXES_DATA = [
         meter: 6,
         description: 'In the heart of Marseille Prado, this 6 m² unit offers the perfect solution for storing boxes, seasonal items, or small furniture. Safe, accessible, and practical.',
         price: 70,
-        images: ['/assets/box/boxes.webp'],
+        images: ['/assets/box/boxes.webp', '/assets/box/box1.jpg'],
         address: '9, boulevard du Prado 13008 Marseille',
         city: 'Marseille'
     },
@@ -33,7 +33,7 @@ const BOXES_DATA = [
         meter: 12,
         description: 'Close to Toulouse Blagnac airport, this spacious 12 m² unit is perfect for professionals or families needing extra room. Modern, secure, and easily accessible.',
         price: 110,
-        images: ['/assets/box/boxes.webp'],
+        images: ['/assets/box/boxes.webp', '/assets/box/box1.jpg'],
         address: '2, rue des Ailes 31700 Blagnac',
         city: 'Marseille'
     },
@@ -51,7 +51,7 @@ const BOXES_DATA = [
         meter: 7,
         description: 'Located in Nice Saint-Isidore, this 7 m² unit offers a secure and clean environment to store your valuable belongings or seasonal equipment.',
         price: 85,
-        images: ['/assets/box/boxes.webp'],
+        images: ['/assets/box/boxes.webp', '/assets/box/box1.jpg'],
         address: '5, chemin de la Campanette 06200 Marseille',
         city: 'Marseille'
     },
@@ -60,7 +60,7 @@ const BOXES_DATA = [
         meter: 11,
         description: 'In the south of Nantes, this 11 m² box offers flexibility for professionals or individuals looking for secure and accessible storage.',
         price: 95,
-        images: ['/assets/box/boxes.webp'],
+        images: ['/assets/box/boxes.webp', '/assets/box/box1.jpg'],
         address: '18, route de Clisson 44200 Bordeaux',
         city: 'Bordeaux'
     }

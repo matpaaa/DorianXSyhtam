@@ -1,3 +1,4 @@
+import generateRandomNumber from "../_utils/generateRandomNumber.js"
 
 
 export default class Review {
@@ -16,7 +17,7 @@ export default class Review {
         this.type = type
 
         this.date = `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`
-        this.reviewId = JSON.stringify(new Date().getTime())
+        this.reviewId = generateRandomNumber()
     }
 
     /**
