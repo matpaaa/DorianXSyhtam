@@ -12,8 +12,9 @@ export default class Box {
      * @param {string} description 
      * @param {string} address
      * @param {string} city 
+     * @param {number} tvaPercentage
      */
-    constructor(name, price, images, meter, description, address, city) {
+    constructor(name, price, images, meter, description, address, city, tvaPercentage=20) {
         this.name = name
         this.price = price
         this.images = images
@@ -21,6 +22,7 @@ export default class Box {
         this.description = description
         this.address = address
         this.city = city
+        this.tvaPercentage = tvaPercentage
 
         this.boxId = generateRandomNumber()
     }
@@ -69,4 +71,24 @@ export default class Box {
      * City Paris | Lyon | Marseille | Bordeaux
      */
     city = null
+
+    /**
+     * TVA Percentage 
+     */
+    tvaPercentage = 20
+
+    /**
+     * Get TVA value
+     */
+    getTvaValue() {
+        return this.price * (this.tvaPercentage / 100)
+    }
+
+    /**
+     * Price with the TVA
+     */
+    getPriceTtc() {
+        return this.price + this.getTvaValue()
+
+    }
 }
