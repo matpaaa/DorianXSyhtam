@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/review.css">
+    <link rel="stylesheet" href="/css/layouts.css">
+    <title>Accueil</title>
+</head>
+<body>
+
+    <section class="image-section">
+        <header class="header">
+        
+        <img src="/assets/logo/logoWhite.svg" class="logo">
+         <nav>
+             <ul class="nav-section">
+                <li>
+                    <a href="index.html" class="nav-element">Accueil</a>
+                </li>
+                <li>   
+                    <a href="shopList.html" class="nav-element">Boutique</a>
+                </li> 
+                <li>
+                    <a href="teams.html" class="nav-element">Équipes</a>
+                </li> 
+            </ul>
+         </nav>
+
+        <div class="button-section">
+            <div class="header-space"></div>
+
+            <a href="shopList.html" class="btn-primary">Louez-moi</a>
+
+            <div class="langage">
+                <button id="lang-fr">FR</button>
+                <button id="lang-en">EN</button>
+            </div>
+         </div>
+        
+    </header>
+
+        <div class="steps-list">
+            <div class="step-container">
+                <p class="step-title">1.</p>
+                <p class="step-text">Trouvez la box qui vous convient le mieux parmi notre gamme d’offres</p>
+            </div>
+
+            <div class="step-container">
+                <p class="step-title">2.</p>
+                <p class="step-text">Louez l’unité de stockage qui vous convient et sélectionnez la durée de location</p>
+            </div>
+
+            <div class="step-container">
+                <p class="step-title">3.</p>
+                <p class="step-text">Récupérez vos clés et déposez tout ce que vous souhaitez</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="presentation-section">
+            <div class="presentation-left">
+                <h2 class="title-h2">Présentation</h2>
+                <p class="text">
+                    Shurguard est une entreprise innovante engagée dans la sécurité et la protection. Fondée avec le désir de garantir fiabilité, performance et tranquillité d’esprit, Shurguard propose des solutions sur mesure pour les particuliers et les professionnels. Nous combinons expertise technique, matériaux de haute qualité et processus rigoureux pour répondre à vos besoins les plus exigeants.
+                    <br><br>
+                    Notre mission est simple mais ambitieuse : rendre vos environnements plus sûrs. Cela implique d’évaluer minutieusement votre situation, de concevoir des solutions adaptées et de fournir un service client attentif. Chez Shurguard, la qualité n’est pas un compromis — c’est le fondement de tout ce que nous faisons.
+                </p>
+    
+                <div class="presentation-btn-container">
+                    <a href="/about.html" class="btn-transparent">
+                        <p class="btn-title">En savoir plus</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6A6262" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>     
+                    </a>
+                </div>
+            </div>
+    
+            <div class="presentation-right">
+                <img src="/assets/imageBuilding/building6.jpeg" alt="Bâtiment Shurguard" class="img-presentation">
+            </div>
+        </div>
+    </section>
+
+    <section class="boxes-section">
+        <h2 class="title-h2">Nos meilleures box</h2>
+
+        <div class="boxes-list" id="boxes-list-container"></div>
+
+        <div class="boxes-btn-container">
+            <a href="/shopList.html" class="btn-primary">
+                <p class="btn-title">Voir toutes les box</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFFFFF" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>     
+            </a>
+        </div>
+    </section>
+
+    <section class="reviews-section section">
+        <h2 class="title-h2">Nos derniers avis</h2>
+
+        <div class="reviews-container" id="reviews-container">
+            <div class="reviews-col" id="reviews-col-container-1"></div>
+            <div class="reviews-col" id="reviews-col-container-2"></div>
+        </div>
+
+        <div class="reviews-btn-container">
+            <a href="/reviews.html" class="btn-transparent">
+                <p class="btn-title">Voir tous les avis</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6A6262" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>     
+            </a>
+        </div>
+    </section>
+
+    <script type="module" src="/js/boxes/homeBoxesScript.js"></script>
+    <script type="module" src="/js/reviews/homeReviewsScript.js"></script>
+    <script type="module" src="/js/components/homeLayoutsComponents.js"></script>
+</body>
+</html>

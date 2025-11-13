@@ -1,4 +1,6 @@
 import Box from "../boxes/box.model.js"
+import getLanguageUsed from "../_utils/getLanguageUsed.js"
+
 
 /**
  * Generate Shop List Component
@@ -7,6 +9,7 @@ import Box from "../boxes/box.model.js"
  */
 export default function shopListComponent(box, containerId) {
 
+    const lang = getLanguageUsed()
     const boxContainer = document.createElement('div')
     boxContainer.className = 'box-container'
 
@@ -38,14 +41,14 @@ export default function shopListComponent(box, containerId) {
     boxName.textContent = `${box.name} - ${box.meter}m`
 
     const boxDescription = document.createElement('p')
-    boxDescription.textContent = box.description
+    boxDescription.textContent = lang === 'en' ? box.descriptionEn : box.descriptionFr
 
     boxInformations.appendChild(boxName)
     boxInformations.appendChild(boxDescription)
 
     const price = document.createElement('p')
     price.className = 'box-price'
-    price.textContent = `${box.price}$/month`
+    price.textContent = lang === 'en' ? `${box.price}$/month` : `${box.price}€/mois`
 
     informationsContainer.appendChild(cityContainer)
     informationsContainer.appendChild(boxInformations)
@@ -59,12 +62,12 @@ export default function shopListComponent(box, containerId) {
     const buttonPrimary = document.createElement('a')
     buttonPrimary.classList = 'btn-primary'
     buttonPrimary.innerHTML = `
-        See More
+        ${lang === 'en' ? 'See more' : 'Voir plus'}
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
     `
 
     buttonPrimary.onclick = () => {
-        window.location.href = `/shop.html?id=${box.boxId}`
+        window.location.href = `/${lang}/shop.html?id=${box.boxId}`
     }
 
     buttonContainer.appendChild(buttonPrimary)
