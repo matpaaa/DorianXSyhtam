@@ -28,9 +28,10 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-items: start;
+    justify-content: space-between;
     gap: 80px;
     background: var(--white);
+    height: 100vh;
 }
 
 .title-h1 {
@@ -107,6 +108,16 @@ body {
 
 .btn-primary > p {
     color: var(--white);
+}
+
+.text-error {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
 }
 
 @media only screen and (max-width:768px){
