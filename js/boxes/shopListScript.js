@@ -40,10 +40,8 @@ class FilterBoxes {
         const input = document.getElementById('searchbar-input')
         if (input.value) {
             const boxesFiltered = this.boxes.getBoxes().filter(box => box.name.toLowerCase().includes(input.value.toLowerCase()))
-            // this.showBoxes(boxesFiltered)
             return boxesFiltered
         } else {
-            // this.showBoxes(this.boxes.getBoxes())
             return this.boxes.getBoxes()
         }
     }

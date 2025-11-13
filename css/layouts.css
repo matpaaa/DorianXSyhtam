@@ -10,6 +10,7 @@
     border-bottom: 2px var(--primary) solid;
     padding-left: 140px;
     padding-right: 140px;
+    min-height: 100px;
     height: 100px;
 }
 
@@ -94,6 +95,7 @@
     flex-direction: row;
     background-color: var(--black);
     padding: 0 140px;
+    min-height: 200px;
     height: 200px;
 }
 
