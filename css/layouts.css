@@ -16,26 +16,31 @@
 }
 
 .langage-section {
-       width: 80px;
+    width: 80px;
 }
 
 .langage {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
 }
 
-.langage > button{
-    color:var(--black);
+.langage > button {
+    color: var(--gray);
     background-color: transparent;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
-
-    
+    cursor: pointer;
 }
 
-.rent-me{
+.language-selected {
+    color: var(--primary)!important;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.rent-me {
     background-color: var(--primary);
     color: var(--white);
     padding-left: 40px;
@@ -47,19 +52,19 @@
     font-size: 14px;
 }
 
-.rent-me:hover{
+.rent-me:hover {
     cursor: pointer;
     background-color: var(--primary-hover);
 }
 
-.nav-element{
+.nav-element {
     color: var(--black);
     text-decoration: none;
     font-size: 20px;
     font-weight: 700;
 }
 
-.nav-section{
+.nav-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,12 +73,11 @@
     gap: 20px;
 }
 
-.logo{
+.logo {
     width: 288px;
     height: 24px;
 
 }
-
 
 .button-rent-me{
     display: flex;

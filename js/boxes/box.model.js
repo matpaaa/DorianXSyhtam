@@ -9,17 +9,19 @@ export default class Box {
      * @param {number} price 
      * @param {string[]} images 
      * @param {number} meter 
-     * @param {string} description 
+     * @param {string} descriptionEn
+     * @param {string} descriptionFr
      * @param {string} address
      * @param {string} city 
      * @param {number} tvaPercentage
      */
-    constructor(name, price, images, meter, description, address, city, tvaPercentage=20) {
+    constructor(name, price, images, meter, descriptionEn, descriptionFr, address, city, tvaPercentage=20) {
         this.name = name
         this.price = price
         this.images = images
         this.meter = meter
-        this.description = description
+        this.descriptionEn = descriptionEn
+        this.descriptionFr = descriptionFr
         this.address = address
         this.city = city
         this.tvaPercentage = tvaPercentage
@@ -43,9 +45,14 @@ export default class Box {
     images = []
 
     /**
-     * Box description
+     * Box description EN
      */
-    description = null
+    descriptionEn = null
+
+    /**
+     * Box description FR
+     */
+    descriptionFr = null
 
     /**
      * Box meter square

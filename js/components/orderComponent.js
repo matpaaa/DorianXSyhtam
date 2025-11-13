@@ -1,6 +1,7 @@
 import Boxes from "../boxes/boxes.js"
 import Reviews from "../reviews/reviews.js"
 import DynamicStorage from '../storage/DynamicStorage.js'
+import getLanguageUsed from "../_utils/getLanguageUsed.js"
 
 
 const dynamicStorage = new DynamicStorage()
@@ -14,17 +15,18 @@ const boxes = new Boxes(dynamicStorage, reviews)
  */
 export default function orderComponent(boxId, containerId) {
     
+    const lang = getLanguageUsed()
     const box = boxes.getBox(boxId)
 
     const boxName = box.name
     const boxPrice = box.price
     const boxImage = box.images[0]
-    const boxDescription = box.description
+    const boxDescription = lang === 'en' ? box.descriptionEn : box.descriptionFr
     
 
     const orderTitle = document.createElement('h2')
     orderTitle.className = 'title-h2'
-    orderTitle.textContent = 'Order List'
+    orderTitle.textContent = lang === 'en' ? 'Order List' : 'Liste de commandes'
 
 
     const line = document.createElement('div')
@@ -34,12 +36,12 @@ export default function orderComponent(boxId, containerId) {
     const image = document.createElement("img")  
     image.src = boxImage
     image.className = 'shop-image'
-    image.alt = 'Box image'
+    image.alt = lang === 'en' ? 'Box image' : 'Images des boxes'
 
 
     const price = document.createElement("p")
     price.className = 'text'
-    price.textContent = `${boxPrice}$/month`
+    price.textContent = lang === 'en' ? `${boxPrice}$/month` : `${boxPrice}€/month`
 
     const description = document.createElement('p')
     description.className = 'text'

@@ -3,6 +3,7 @@ import Reviews from "../reviews/reviews.js";
 import DynamicStorage from "../storage/DynamicStorage.js";
 import Boxes from "../boxes/boxes.js";
 import reviewComponent from "./reviewComponent.js";
+import getLanguageUsed from "../_utils/getLanguageUsed.js"
 
 
 const dynamicStorage = new DynamicStorage()
@@ -20,6 +21,7 @@ const boxes = new Boxes(
  */
 export default function shopComponent(boxId, containerId) {
 
+    const lang = getLanguageUsed()
     const box = boxes.getBox(boxId)
 
     const shopContainer = document.createElement('div')
@@ -66,14 +68,14 @@ export default function shopComponent(boxId, containerId) {
 
     const reviewsNumber = document.createElement('p')
     reviewsNumber.className = 'stars-title'
-    reviewsNumber.textContent = `(${box.reviews.length} reviews)`
+    reviewsNumber.textContent = lang === 'en' ? `(${box.reviews.length} reviews)` : `(${box.reviews.length} avis)`
 
     reviewsContainer.appendChild(starsContainer)
     reviewsContainer.appendChild(reviewsNumber)
 
     const price = document.createElement('p')
     price.className = 'price'
-    price.textContent = `${box.price}$/month`
+    price.textContent = lang === 'en' ? `${box.price}$/month` : `${box.price}€/mois`
 
     informationsHeader.appendChild(boxTitle)
     informationsHeader.appendChild(reviewsContainer)
@@ -81,19 +83,21 @@ export default function shopComponent(boxId, containerId) {
 
     const description = document.createElement('p')
     description.className = 'text'
-    description.textContent = box.description
+    description.textContent = lang === 'en' ? box.descriptionEn : box.descriptionFr
     
     informationsContainer.appendChild(informationsHeader)
     informationsContainer.appendChild(description)
 
     const btnBuy = document.createElement('a')
     btnBuy.className = 'btn-primary'
+
     btnBuy.innerHTML = `
-        Buy
+        ${lang === 'en' ? 'Buy' : 'Acheter'}
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z"></path></svg>
     `
+
     btnBuy.onclick = () => {
-        document.location.href = `order.html?id=${boxId}`
+        document.location.href = `/${lang}/order.html?id=${boxId}`
     }
 
     shopRightContainer.appendChild(informationsContainer)
@@ -131,7 +135,7 @@ export default function shopComponent(boxId, containerId) {
 
     const detailsTitle = document.createElement('h2')
     detailsTitle.className = 'title-h2'
-    detailsTitle.textContent = 'Details'
+    detailsTitle.textContent = lang === 'en' ? 'Details' : 'Détails'
 
     const detailsContainer = document.createElement('div')
     detailsContainer.className = 'details-container'
@@ -150,7 +154,7 @@ export default function shopComponent(boxId, containerId) {
     detailsPriceElement.className = 'details-element'
     detailsPriceElement.innerHTML = `
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#6A6262" viewBox="0 0 256 256"><path d="M152,116H140V60h4a28,28,0,0,1,28,28,12,12,0,0,0,24,0,52.06,52.06,0,0,0-52-52h-4V24a12,12,0,0,0-24,0V36h-4a52,52,0,0,0,0,104h4v56H104a28,28,0,0,1-28-28,12,12,0,0,0-24,0,52.06,52.06,0,0,0,52,52h12v12a12,12,0,0,0,24,0V220h12a52,52,0,0,0,0-104Zm-40,0a28,28,0,0,1,0-56h4v56Zm40,80H140V140h12a28,28,0,0,1,0,56Z"></path></svg>
-        <p class="details-text">${box.price} per meter</p>
+        <p class="details-text">${box.price} ${lang === 'en' ? 'per meter' : 'par mètre'}</p>
     `
 
     const detailsSizeElement = document.createElement('div')
@@ -167,7 +171,7 @@ export default function shopComponent(boxId, containerId) {
 
     const moreDetails = document.createElement('div')
     moreDetails.className = 'text'
-    moreDetails.textContent = 'Our storage solutions are available for purchase or hire, depending on your needs. Hire is available for flexible periods, with a commitment tailored to your situation. Purchasing gives you permanent access to a dedicated space. In both cases, booking is quick and easy: a clear contract, transparent pricing and personalised support. Our teams are available to answer all your questions and guide you through the process.'
+    moreDetails.textContent = lang === 'en' ? 'Our storage solutions are available for purchase or hire, depending on your needs. Hire is available for flexible periods, with a commitment tailored to your situation. Purchasing gives you permanent access to a dedicated space. In both cases, booking is quick and easy: a clear contract, transparent pricing and personalised support. Our teams are available to answer all your questions and guide you through the process.' : `Nos solutions de stockage sont disponibles à l'achat ou à la location, selon vos besoins. La location est disponible pour des périodes flexibles, avec un engagement adapté à votre situation. L'achat vous donne un accès permanent à un espace dédié. Dans les deux cas, la réservation est rapide et facile : un contrat clair, des tarifs transparents et un accompagnement personnalisé. Nos équipes sont à votre disposition pour répondre à toutes vos questions et vous guider tout au long du processus.`
 
     detailsContainer.appendChild(detailsListContainer)
     detailsContainer.appendChild(moreDetails)
@@ -182,7 +186,7 @@ export default function shopComponent(boxId, containerId) {
 
     const reviewsTitle = document.createElement('h2')
     reviewsTitle.className = 'title-h2'
-    reviewsTitle.textContent = 'Last Reviews'
+    reviewsTitle.textContent = lang === 'en' ? 'Last Reviews' : 'Derniers avis'
 
     const reviewsList = document.createElement('div')
     reviewsList.className = 'reviews-list'

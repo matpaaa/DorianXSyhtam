@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/layouts.css">   
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/order.css">
+    <link rel="stylesheet" href="/css/orderConfirmation.css">
+    <title>Commande</title>
+</head>
+<body>
+    <section id="order-section-id" class="section order-data-section">
+
+        <div class="details-container">
+            <div class="inputs-container">
+                <div class="input-section">
+                    <div class="input-container">
+                        <p class="input-title">Prénom</p>
+                        <input id="input-firstname" class="input-element" type="text" placeholder="Jean">
+                    </div>
+        
+                    <div class="input-container">
+                        <p class="input-title">Nom</p>
+                        <input id="input-lastname" class="input-element" type="text" placeholder="Dupont">
+                    </div>
+    
+                    <div class="input-container">
+                        <p class="input-title">Adresse e-mail</p>
+                        <input id="input-email" class="input-element" type="text" placeholder="jean.dupont@gmail.com">
+                    </div>
+                </div>
+        
+                <div class="input-section">
+                    <div class="input-container">
+                        <p class="input-title">Nom sur la carte</p>
+                        <input id="input-name-card" class="input-element" type="text" placeholder="Jean Dupont">
+                    </div>
+        
+                    <div class="input-container">
+                        <p class="input-title">Numéro de carte</p>
+                        <input id="input-number-card" class="input-element" type="text" placeholder="0000 0000 0000 0000">
+                    </div>
+        
+                    <div class="input-section-row">
+                        <div class="input-container">
+                            <p class="input-title">Date d’expiration</p>
+                            <input id="input-expiry-card" class="input-element input-element-small" type="text" placeholder="MM/AA">
+                        </div>
+        
+                        <div class="input-container">
+                            <p class="input-title">CCV</p>
+                            <input id="input-ccv-card" class="input-element input-element-small" type="text" placeholder="000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p id="order-error" class="text-error"></p>
+        </div>
+    </section>
+
+    <script src="/js/shop/orderScript.js" type="module"></script>
+    <script type="module" src="/js/components/layoutsComponent.js"></script>
+</body>
+</html>
