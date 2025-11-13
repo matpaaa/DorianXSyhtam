@@ -9,6 +9,7 @@ COPY js js
 COPY assets assets
 COPY en en
 COPY fr fr
+COPY *.html ./
 
 RUN chown -R nginx:nginx /var/www/proj2
 
