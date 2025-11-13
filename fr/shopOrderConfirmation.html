@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/layouts.css">   
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/orderConfirmation.css">
+    <title>Confirmation de commande</title>
+</head>
+<body>
+    <section class="section">
+        <div class="title-container">
+            <h1 class="title-h1">Merci</h1>
+    
+            <div class="subtitle-container">
+                <h2 class="title-h2 center">Votre commande <span class="bold">#462005939980</span> a été passée !</h2>
+                <p class="text center">Nous avons envoyé un e-mail de confirmation et votre reçu à <span class="bold" id="email"></span>. Si l’e-mail n’arrive pas dans les deux minutes, vérifiez votre dossier de courrier indésirable.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+
+        <div class="time-section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm68-84a12,12,0,0,1-12,12H128a12,12,0,0,1-12-12V72a12,12,0,0,1,24,0v44h44A12,12,0,0,1,196,128Z"></path></svg>
+            <p class="info-subtitle">Heure de la commande :</p>
+            <p class="text">07/10/2025 12:34 CEST</p>
+        </div>
+
+        <div class="private-info">
+            <div class="info-frame">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256"><path d="M128,60a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,60Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,124Zm0-112a92.1,92.1,0,0,0-92,92c0,77.36,81.64,135.4,85.12,137.83a12,12,0,0,0,13.76,0,259,259,0,0,0,42.18-39C205.15,170.57,220,136.37,220,104A92.1,92.1,0,0,0,128,12Zm31.3,174.71A249.35,249.35,0,0,1,128,216.89a249.35,249.35,0,0,1-31.3-30.18C80,167.37,60,137.31,60,104a68,68,0,0,1,136,0C196,137.31,176,167.37,159.3,186.71Z"></path></svg>
+                <p class="info-name">Livraison</p>
+                <p class="info-subtitle" id="name"></p>
+                <p class="text" id="address"></p>
+            </div>
+
+            <div class="info-frame">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256"><path d="M224,44H32A20,20,0,0,0,12,64V192a20,20,0,0,0,20,20H224a20,20,0,0,0,20-20V64A20,20,0,0,0,224,44Zm-4,24V88H36V68ZM36,188V112H220v76Zm172-24a12,12,0,0,1-12,12H164a12,12,0,0,1,0-24h32A12,12,0,0,1,208,164Zm-68,0a12,12,0,0,1-12,12H116a12,12,0,0,1,0-24h12A12,12,0,0,1,140,164Z"></path></svg>
+                <p class="info-name">Facturation</p>
+                <p class="info-subtitle" id="name"></p>
+                <p class="text" id="address"></p>
+            </div>
+
+            <div class="info-frame">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256"><path d="M196,76a16,16,0,1,1-16-16A16,16,0,0,1,196,76Zm48,22.74A84.3,84.3,0,0,1,160.11,180H160a83.52,83.52,0,0,1-23.65-3.38l-7.86,7.87A12,12,0,0,1,120,188H108v12a12,12,0,0,1-12,12H84v12a12,12,0,0,1-12,12H40a20,20,0,0,1-20-20V187.31a19.86,19.86,0,0,1,5.86-14.14l53.52-53.52A84,84,0,1,1,244,98.74ZM202.43,53.57A59.48,59.48,0,0,0,158,36c-32,1-58,27.89-58,59.89a59.69,59.69,0,0,0,4.2,22.19,12,12,0,0,1-2.55,13.21L44,189v23H60V200a12,12,0,0,1,12-12H84V176a12,12,0,0,1,12-12h19l9.65-9.65a12,12,0,0,1,13.22-2.55A59.58,59.58,0,0,0,160,156h.08c32,0,58.87-26.07,59.89-58A59.55,59.55,0,0,0,202.43,53.57Z"></path></svg>
+                <p class="info-name">Date de soumission</p>
+                <p class="text">10/10/2025 9:30 CEST</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="order-section section" id="order-section-id">
+        <div class="summary-section">
+            <h2 class="title-h2">Résumé de la commande</h2>
+            
+            <div class="separator"></div>
+
+            <div class="price-line">
+                <p class="text">Sous-total</p>
+                <p class="text summary-price"></p>
+            </div>
+
+            <div class="price-line">
+                <p class="text">TVA</p>
+                <p class="text summary-tva"></p>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="price-line">
+                <p class="total">Total</p>
+                <p class="total summary-total"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+
+        <a class="btn-transparent btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6A6262" viewBox="0 0 256 256"><path d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z"></path></svg>
+            <p class="btn-title">Retour à l’accueil</p>
+        </a>
+
+    </section>
+
+    <script src="/js/shop/orderConfirmationScript.js" type="module"></script>
+    <script type="module" src="/js/components/layoutsComponent.js"></script>
+</body>
+</html>

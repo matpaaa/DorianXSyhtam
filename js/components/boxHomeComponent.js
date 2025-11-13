@@ -1,4 +1,5 @@
 import Box from "../boxes/box.model.js"
+import getLanguageUsed from "../_utils/getLanguageUsed.js"
 
 
 /**
@@ -8,12 +9,14 @@ import Box from "../boxes/box.model.js"
  */
 export default function boxHomeComponent(box, containerId) {
 
+    const lang = getLanguageUsed()
+
     const boxItem = document.createElement('div')
     boxItem.className = 'box-item'
 
     boxItem.style.backgroundImage = `url(${box.images[0]})`
     boxItem.onclick = () => {
-        document.location.href = `/shop.html?id=${box.boxId}`
+        document.location.href = `/${lang}/shop.html?id=${box.boxId}`
     }
 
     const boxTag = document.createElement('div')
@@ -32,7 +35,8 @@ export default function boxHomeComponent(box, containerId) {
 
     const boxFooterText = document.createElement('p')
     boxFooterText.className = 'box-footer-text'
-    boxFooterText.textContent = box.description.length >= 75 ? box.description.slice(0, 75) + '...' : box.description
+    const description = lang === 'en' ? box.descriptionEn : box.descriptionFr
+    boxFooterText.textContent = description.length >= 75 ? description.slice(0, 75) + '...' : description
 
 
 

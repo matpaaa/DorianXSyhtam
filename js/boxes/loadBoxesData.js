@@ -17,7 +17,8 @@ function loadBoxesData() {
             box.price,
             box.images,
             box.address,
-            box.description,
+            box.descriptionEn,
+            box.descriptionFr,
             box.city
         )
     }
