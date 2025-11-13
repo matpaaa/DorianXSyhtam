@@ -7,11 +7,10 @@ WORKDIR /var/www/proj2
 COPY css css
 COPY js js
 COPY assets assets
-COPY *.html ./
+COPY en en
+COPY fr fr
 
-RUN chown -R nginx:nginx /var/www/proj2 \
-    && find /var/www/proj2 -type d -exec chmod 755 {} \; \
-    && find /var/www/proj2 -type f -exec chmod 644 {} \;
+RUN chown -R nginx:nginx /var/www/proj2
 
 EXPOSE 80
 
