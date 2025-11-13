@@ -28,3 +28,14 @@ enButton.addEventListener('click', () => {
 if (lang === 'en') {
     enButton.classList.add('language-selected')
 }
+
+
+
+const aboutBtn = document.querySelector('.about-btn')
+aboutBtn.href = `/${lang}/about.html`
+
+const shopListBtn = document.querySelector('.shop-list-btn')
+shopListBtn.href = `/${lang}/shopList.html`
+
+const reviewsBtn = document.querySelector('.sreviews-btn')
+reviewsBtn.href = `/${lang}/reviews.html`
