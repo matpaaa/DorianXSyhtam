@@ -23,6 +23,9 @@
 
 .section {
     padding: 0px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 
 body {
@@ -123,6 +126,7 @@ body {
 @media only screen and (max-width:768px){
     .section {
         padding: 0px 40px;
+        gap: 50px;
     } 
 
     body {

@@ -40,26 +40,25 @@
     </header>
 
     <section class="section">
-
-        <h1 class="title-h1">Thank You</h1>
-        <h2 class="title-h2 center">Your order <span class="bold">#462005939980</span> has been placed !</h2>
-        <p class="text center">We sent an email to <span class="bold" id="email"></span> your order confirmation and receipt. If the email hasn’t arrived within two minutes,please check your spam folder to see if the email was routed there.
-        </p>
-
+        <div class="title-container">
+            <h1 class="title-h1">Thank You</h1>
+    
+            <div class="subtitle-container">
+                <h2 class="title-h2 center">Your order <span class="bold">#462005939980</span> has been placed !</h2>
+                <p class="text center">We sent an email to <span class="bold" id="email"></span> your order confirmation and receipt. If the email hasn’t arrived within two minutes,please check your spam folder to see if the email was routed there.</p>
+            </div>
+        </div>
     </section>
-
+    
     <section class="section">
 
         <div class="time-section">
-
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212Zm68-84a12,12,0,0,1-12,12H128a12,12,0,0,1-12-12V72a12,12,0,0,1,24,0v44h44A12,12,0,0,1,196,128Z"></path></svg>
             <p class="info-subtitle">Time Placed :</p>
             <p class="text">07/10/2025 12:34 CEST</p>
-
         </div>
 
         <div class="private-info">
-
             <div class="info-frame">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#000000" viewBox="0 0 256 256"><path d="M128,60a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,60Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,124Zm0-112a92.1,92.1,0,0,0-92,92c0,77.36,81.64,135.4,85.12,137.83a12,12,0,0,0,13.76,0,259,259,0,0,0,42.18-39C205.15,170.57,220,136.37,220,104A92.1,92.1,0,0,0,128,12Zm31.3,174.71A249.35,249.35,0,0,1,128,216.89a249.35,249.35,0,0,1-31.3-30.18C80,167.37,60,137.31,60,104a68,68,0,0,1,136,0C196,137.31,176,167.37,159.3,186.71Z"></path></svg>
                 <p class="info-name">Shipping</p>
@@ -81,37 +80,32 @@
             </div>
 
         </div>
-        
     </section>
 
-    <section class="section">
-        <div class="order-section" id="order-section-id">
-            <div class="summary-section">
-                <h2 class="title-h2">Order Summary</h2>
-                <div class="separator"></div>
+    <section class="order-section section" id="order-section-id">
+        <div class="summary-section">
+            <h2 class="title-h2">Order Summary</h2>
+            
+            <div class="separator"></div>
 
-                <div class="price-line">
+            <div class="price-line">
+                <p class="text">Subtotal</p>
+                <p class="text summary-price">/p>
+            </div>
 
-                    <p class="text">Subtotal</p>
-                    <p class="text summary-price">/p>
+            <div class="price-line">
+                <p class="text">TVA</p>
+                <p class="text summary-tva"></p>
+            </div>
 
-                </div>
+            <div class="separator"></div>
 
-                <div class="price-line">
-
-                    <p class="text">TVA</p>
-                    <p class="text summary-tva"></p>
-
-                </div>
-
-                <div class="separator"></div>
-                <div class="price-line">
-                    <p class="total">Total</p>
-                    <p class="total summary-total"></p>
-
-                </div>
+            <div class="price-line">
+                <p class="total">Total</p>
+                <p class="total summary-total"></p>
 
             </div>
+
         </div>
     </section>
 

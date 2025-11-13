@@ -118,8 +118,9 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    gap: 80px;
 }
 
 .presentation-left {
@@ -128,6 +129,10 @@
     align-items: start;
     gap: 20px;
     width: 680px;
+}
+
+.img-presentation {
+    height: 500px;
 }
 
 .boxes-section {
@@ -162,7 +167,6 @@
     width: 250px;
     height: 400px;
     padding-top: 10px;
-    /* background-image: url('/assets/box/boxes.webp'); */
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -226,6 +230,7 @@
     justify-content: center;
     gap: 20px;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .reviews-col {
@@ -242,3 +247,40 @@
     justify-content: center;
 }
 
+
+@media only screen and (max-width:1024px) {
+    .presentation-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentation-left {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .steps-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxes-btn-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boxes-section {
+        padding: 50px 40px
+    }
+}
+
+@media only screen and (max-width:450px){
+    .boxes-section {
+        padding: 50px 20px
+    }
+
+    .img-presentation {
+        height: 200px;
+    }
+}
