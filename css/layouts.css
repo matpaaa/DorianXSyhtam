@@ -12,6 +12,7 @@
     padding-right: 140px;
     min-height: 100px;
     height: 100px;
+    gap: 20px
 }
 
 .langage-section {
@@ -97,6 +98,7 @@
     padding: 0 140px;
     min-height: 200px;
     height: 200px;
+    gap: 20px
 }
 
 .nav-footer{
@@ -125,7 +127,7 @@
     display: none;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width: 900px) {
 
     .header{
         display: flex;
@@ -135,7 +137,7 @@
         background-color: transparent;
         border-bottom: 2px var(--primary) solid;
         padding: 20px 50px;
-        height: 191px;
+        min-height: 191px;
     }
 
     .header-space {
@@ -163,22 +165,22 @@
         width: 75px;
     }
 
-    .footer{
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--black);
-    padding: 20px 50px;
-    height: 200px;
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--black);
+        padding: 20px 50px;
+        min-height: 200px;
     }
 
     .nav-element-footer{
-    color: var(--white);
-    text-decoration: none;
-    font-size: 20px;
-    white-space: nowrap;
+        color: var(--white);
+        text-decoration: none;
+        font-size: 20px;
+        white-space: nowrap;
     }
 
 }
@@ -193,7 +195,7 @@
         background-color: transparent;
         border-bottom: 2px var(--primary) solid;
         padding: 20px 50px;
-        height: 240px;
+        min-height: 240px;
     }
 
     .header-space {
@@ -225,21 +227,20 @@
     }
 
     .footer{
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--black);
-    padding: 20px 20px;
-    height: 200px;
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--black);
+        padding: 20px 20px;
+        min-height: 200px;
     }
 
     .nav-element-footer{
-    color: var(--white);
-    text-decoration: none;
-    font-size: 20px;
-    
+        color: var(--white);
+        text-decoration: none;
+        font-size: 20px;
     }
 
     .nav-footer{

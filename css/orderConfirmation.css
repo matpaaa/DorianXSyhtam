@@ -1,3 +1,16 @@
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.subtitle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .bold {
     font-weight: 700;
 }
@@ -21,6 +34,8 @@
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .info-frame {
@@ -28,8 +43,8 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px 20px;
-    width: 360px;
-    height: 350px; 
+    width: 300px;
+    height: 300px; 
     border: 1px solid var(--gray);   
     border-radius: 4%;
 }
@@ -76,6 +91,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
 }
 
 .order-list-section {
@@ -112,4 +131,15 @@
 
 .btn {
     justify-content: center;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+    
+    .article-section {
+        flex-direction: column;
+        width: 100%;
+    }
 }
