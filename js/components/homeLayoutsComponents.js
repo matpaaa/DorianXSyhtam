@@ -37,5 +37,5 @@ aboutBtn.href = `/${lang}/about.html`
 const shopListBtn = document.querySelector('.shop-list-btn')
 shopListBtn.href = `/${lang}/shopList.html`
 
-const reviewsBtn = document.querySelector('.sreviews-btn')
+const reviewsBtn = document.querySelector('.reviews-btn')
 reviewsBtn.href = `/${lang}/reviews.html`
